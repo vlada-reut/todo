@@ -3,7 +3,7 @@ from tasks import TaskManager
 from storage import load_tasks, save_tasks
 
 def print_menu():
-    print("\n📋 Меню задач:")
+    print("\nДобро пожаловать!\n📋 Меню задач:")
     print("1. Показать задачи")
     print("2. Добавить задачу")
     print("3. Удалить задачу по номеру")
