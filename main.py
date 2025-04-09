@@ -34,7 +34,7 @@ def main():
             manager.edit_task(index, new_title, new_desc)
         elif choice == "5":
             save_tasks(manager.tasks)
-            print("✅ Задачи сохранены. До свидания!")
+            print("✅ Ваши задачи сохранены. До свидания!")
             break
         else:
             print("❌ Неверный ввод. Попробуйте снова.")
