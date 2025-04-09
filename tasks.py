@@ -17,7 +17,7 @@ class TaskManager:
         self.tasks = [Task.from_dict(t) for t in task_list]
 
     def add_task(self, title, description):
-        new_task = Task(title, description)
+        task = Task(title, description)
         self.tasks.append(new_task)
         print(f"✅ Задача \"{title}\" добавлена.")
 
