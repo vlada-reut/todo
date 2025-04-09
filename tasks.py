@@ -27,7 +27,7 @@ class TaskManager:
             removed = self.tasks.pop(index)
             print(f"🗑️ Задача \"{removed.title}\" удалена.")
         except (ValueError, IndexError):
-            print("❌ Неверный номер задачи.")
+            print("❌ Неверный номер задачи. Попробуйте еще раз!")
 
     def edit_task(self, index_str, new_title, new_description):
         try:
@@ -39,7 +39,7 @@ class TaskManager:
                 task.description = new_description
             print(f"✏️ Задача обновлена.")
         except (ValueError, IndexError):
-            print("❌ Неверный номер задачи.")
+            print("❌ Неверный номер задачи. Попробуйте еще раз!")
 
     def display_tasks(self):
         if not self.tasks:
