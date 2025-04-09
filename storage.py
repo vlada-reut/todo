@@ -21,4 +21,4 @@ def save_tasks(task_list):
     """Save task list to JSON with indentation and UTF-8 encoding."""
     with open(TASKS_DB, "w", encoding="utf-8") as file:
         json.dump([t.to_dict() for t in task_list], file, indent=4, ensure_ascii=False)
-    print("💾 Задачи успешно сохранены.")
+    print("💾 Задачи успешно сохранены. Вы можете просмотреть их.")
