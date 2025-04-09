@@ -3,7 +3,7 @@
 import json
 import os
 
-TASKS_FILE = "tasks.json"  # Файл для хранения задач
+TASKS_DB = "tasks.json"  # Файл для хранения задач
 
 def load_tasks():
     """Загружает задачи из файла, если он существует."""
