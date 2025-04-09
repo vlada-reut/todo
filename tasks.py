@@ -1,6 +1,6 @@
 # tasks.py
 
-class Task:
+class Task: # Класс Task представляет одну задачу с заголовком и описанием
     def __init__(self, title, description):
         self.title = title
         self.description = description
