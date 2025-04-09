@@ -16,7 +16,7 @@ def main():
 
     while True:
         print_menu()
-        choice = input("Выберите действие (1-5): ")
+        user_choice = input("Выберите действие (1-5): ")
 
         if choice == "1":
             manager.display_tasks()
