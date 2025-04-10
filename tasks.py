@@ -1,6 +1,6 @@
 # tasks.py
 
-class Task:
+class Task: # Класс Task представляет одну задачу с заголовком и описанием
     def __init__(self, title, description):
         self.title = title
         self.description = description
@@ -17,7 +17,7 @@ class TaskManager:
         self.tasks = [Task.from_dict(t) for t in task_list]
 
     def add_task(self, title, description):
-        new_task = Task(title, description)
+        task = Task(title, description)
         self.tasks.append(new_task)
         print(f"✅ Задача \"{title}\" добавлена.")
 
@@ -27,7 +27,7 @@ class TaskManager:
             removed = self.tasks.pop(index)
             print(f"🗑️ Задача \"{removed.title}\" удалена.")
         except (ValueError, IndexError):
-            print("❌ Неверный номер задачи.")
+            print("❌ Неверный номер задачи. Попробуйте еще раз!")
 
     def edit_task(self, index_str, new_title, new_description):
         try:
@@ -39,7 +39,7 @@ class TaskManager:
                 task.description = new_description
             print(f"✏️ Задача обновлена.")
         except (ValueError, IndexError):
-            print("❌ Неверный номер задачи.")
+            print("❌ Неверный номер задачи. Попробуйте еще раз!")
 
     def display_tasks(self):
         if not self.tasks:
@@ -47,4 +47,4 @@ class TaskManager:
             return
         print("\n📋 Список задач:")
         for i, task in enumerate(self.tasks, start=1):
-            print(f"{i}. {task.title} — {task.description}")
+            print(f"[{i}] {task.title}: {task.description}")
